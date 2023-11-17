@@ -1,53 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import GitHubService from '../../services/api';
+import { useEffect, useState } from 'react'
+import GitHubService from '../../services/api'
 
 interface UserProfileProps {
-  username: string;
+  username: string
 }
 
-const UserProfile: React.FC<UserProfileProps> = ({ username }) => {
+export const UserProfile = ({ username }: UserProfileProps) => {
   const [userData, setUserData] = useState({
     name: '',
-    bio: 'No bio available',
-    company: 'No company information',
+    bio: 'Biografia não disponível',
+    company: 'Informação não disponível',
     publicRepos: 0,
-    location: 'No location provided',
-  });
+    location: 'Informação não disponível'
+  })
 
   useEffect(() => {
     const fetchUserData = async () => {
-      try {
-        const user = await GitHubService.getUser(username);
-        setUserData({
-          name: user.name || 'No name available',
-          bio: user.bio || 'No bio available',
-          company: user.company || 'No company information',
-          publicRepos: user.publicRepos || 0,
-          location: user.location || 'No location provided',
-        });
-      } catch (error) {
-        console.error(error);
-      }
-    };
+      const user = await GitHubService.getUser(username)
+      if (!user) return
+      setUserData({
+        name: user.name ?? 'Nome não disponível',
+        bio: user.bio ?? 'Biografia não disponível',
+        company: user.company ?? 'Informação não disponível',
+        publicRepos: user.publicRepos ?? 0,
+        location: user.location ?? 'Informação não disponível'
+      })
+    }
 
-    fetchUserData();
-  }, [username]);
+    fetchUserData()
+  }, [username])
 
   return (
-    <div className="text-black">
+    <div className="text-black flex justify-center flex-col items-center">
       <p className="text-xl font-bold mb-4 text-black">{userData.name}</p>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4 justify-center items-center">
         <div>
-          <p><strong className="text-black">Bio:</strong> {userData.bio}</p>
-          <p><strong className="text-black">Company:</strong> {userData.company}</p>
+          <p>
+            <strong className="text-black">Biografia:</strong> {userData.bio}
+          </p>
+          <p>
+            <strong className="text-black">Empresa:</strong> {userData.company}
+          </p>
         </div>
         <div>
-          <p><strong className="text-black">Public Repositories:</strong> {userData.publicRepos}</p>
-          <p><strong className="text-black">Location:</strong> {userData.location}</p>
+          <p>
+            <strong className="text-black">Repositórios Públicos:</strong>{' '}
+            {userData.publicRepos}
+          </p>
+          <p>
+            <strong className="text-black">Localização:</strong>{' '}
+            {userData.location}
+          </p>
         </div>
       </div>
     </div>
-  );
-};
-
-export default UserProfile;
+  )
+}

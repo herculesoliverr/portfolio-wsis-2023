@@ -1,18 +1,9 @@
-import './App.css';
-import UserProfile from './components/Title';
-import UserImage from './components/UserImage';
-import UserRepositories from './components/UserRepositories';
+import { Home } from './pages/Home/Index'
 
 function App() {
   const username = 'nikholau'
 
-  return (
-    <>
-      <UserImage username={username} />
-      <UserProfile username={username} />
-      <UserRepositories username={username} />
-    </>
-  );
+  return <Home username={username} />
 }
 
-export default App;
+export default App
