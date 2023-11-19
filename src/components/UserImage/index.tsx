@@ -19,12 +19,12 @@ export const UserImage = ({ username }: UserImageProps) => {
   }, [username])
 
   return (
-    <div className="flex items-center justify-center h-32 bg-gray-800">
+    <div className="flex items-center justify-center h-64 mt-10">
       {avatarUrl ? (
         <img
           src={avatarUrl}
           alt={`${username}'s avatar`}
-          className="rounded-full h-20 w-20 object-cover border-4 border-white"
+          className="rounded-full h-60 w-60 object-cover"
         />
       ) : (
         <div className="bg-gray-500 rounded-full h-20 w-20"></div>

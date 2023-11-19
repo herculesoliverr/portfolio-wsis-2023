@@ -23,7 +23,8 @@ parserOptions: {
 
 Substitua plugin:@typescript-eslint/recommended por plugin:@typescript-eslint/recommended-type-checked ou plugin:@typescript-eslint/strict-type-checked. Adicione opcionalmente plugin:@typescript-eslint/stylistic-type-checked.
 
-Como Usar
+##  Como Usar
+
 Clone este repositório.
 Execute yarn install para instalar as dependências.
 Personalize o conteúdo conforme suas necessidades.
@@ -32,7 +33,7 @@ Acesse http://localhost:3000 para visualizar o portfólio.
 Contribuindo
 Este projeto é aberto para contribuições. Sinta-se à vontade para enviar pull requests, relatar problemas ou sugerir melhorias. Juntos, podemos aprimorar esta ferramenta para benefício de todos.
 
-Aproveite o minicurso e a criação do seu incrível portfólio!
+##  Aproveite o minicurso e a criação do seu incrível portfólio!
 
 
 Este é um modelo básico para começar com as informações essenciais. Adapte conforme necessário e sinta-se à vontade para adicionar detalhes específicos do seu curso ou projeto.

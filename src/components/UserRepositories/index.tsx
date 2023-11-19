@@ -20,7 +20,7 @@ export const UserRepositories = ({ username }: UserRepositoriesProps) => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h2>User Repositories</h2>
+      <h2>Meus Repositórios</h2>
       <div className="flex flex-wrap justify-center">
         {repositories.map(repo => (
           <a

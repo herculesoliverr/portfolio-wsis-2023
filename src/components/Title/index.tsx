@@ -31,22 +31,18 @@ export const UserProfile = ({ username }: UserProfileProps) => {
   }, [username])
 
   return (
-    <div className="text-black flex justify-center flex-col items-center">
-      <p className="text-xl font-bold mb-4 text-black">{userData.name}</p>
+    <div className="text-black flex justify-center flex-col items-center mb-4 mt-6">
+      <p className="text-xl font-bold  text-black ">{userData.name}</p>
+          <p className='mb-6'>
+            <strong className="text-black "></strong> {userData.bio}
+          </p>
       <div className="grid grid-cols-2 gap-4 justify-center items-center">
         <div>
-          <p>
-            <strong className="text-black">Biografia:</strong> {userData.bio}
-          </p>
           <p>
             <strong className="text-black">Empresa:</strong> {userData.company}
           </p>
         </div>
         <div>
-          <p>
-            <strong className="text-black">Repositórios Públicos:</strong>{' '}
-            {userData.publicRepos}
-          </p>
           <p>
             <strong className="text-black">Localização:</strong>{' '}
             {userData.location}
