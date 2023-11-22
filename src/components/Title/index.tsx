@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react'
 import GitHubService from '../../services/api'
+import { userNameProps } from '../../types'
 
-interface UserProfileProps {
-  username: string
-}
-
-export const UserProfile = ({ username }: UserProfileProps) => {
+export const UserProfile = ({ username }: userNameProps) => {
   const [userData, setUserData] = useState({
     name: '',
     bio: 'Biografia não disponível',
@@ -32,19 +29,19 @@ export const UserProfile = ({ username }: UserProfileProps) => {
 
   return (
     <div className="text-black flex justify-center flex-col items-center mb-4 mt-6">
-      <p className="text-xl font-bold  text-black ">{userData.name}</p>
-          <p className='mb-6'>
-            <strong className="text-black "></strong> {userData.bio}
-          </p>
+      <p className="text-3xl font-bold  text-black">{userData.name}</p>
+      <p className="mb-4 text-2xl">{userData.bio}</p>
+
       <div className="grid grid-cols-2 gap-4 justify-center items-center">
         <div>
-          <p>
-            <strong className="text-black">Empresa:</strong> {userData.company}
+          <p className="text-lg">
+            <strong className="text-black text-xl">Empresa:</strong>{' '}
+            {userData.company}
           </p>
         </div>
         <div>
-          <p>
-            <strong className="text-black">Localização:</strong>{' '}
+          <p className="text-lg">
+            <strong className="text-black text-xl">Localização:</strong>{' '}
             {userData.location}
           </p>
         </div>

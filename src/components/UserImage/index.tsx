@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react'
 import GitHubService from '../../services/api'
+import { userNameProps } from '../../types'
 
-interface UserImageProps {
-  username: string
-}
-
-export const UserImage = ({ username }: UserImageProps) => {
+export const UserImage = ({ username }: userNameProps) => {
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null)
 
   useEffect(() => {
