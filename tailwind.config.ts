@@ -3,7 +3,12 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}', 
   ],
   theme: {
-    extend: {},
+    extend: {
+      
+    },
+    minWidth: {
+      300: '300px',
+    }
   },
   variants: {},
   plugins: [],
