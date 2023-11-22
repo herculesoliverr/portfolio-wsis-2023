@@ -1,5 +1,6 @@
 import { Card } from '../../components/Card'
 import { UserProfile } from '../../components/Title'
+import { UserContacts } from '../../components/UserContacts'
 import { UserImage } from '../../components/UserImage'
 import { UserProjects } from '../../components/UserProjects'
 
@@ -13,11 +14,7 @@ export const Home = ({ username }: HomeProps) => {
       <UserImage username={username} />
       <UserProfile username={username} />
       <UserProjects />
-      <section className="flex flex-col min-w-300 items-center">
-        <Card>
-          <h1>Linkedin</h1>
-        </Card>
-      </section>
+      <UserContacts />
     </div>
   )
 }
