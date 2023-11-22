@@ -13,7 +13,7 @@ export const UserContacts = () => {
           <h1>Github</h1>
         </Card>
         <Card>
-        <FaWhatsapp />
+          <FaWhatsapp />
           <h1>Contate-me</h1>
         </Card>
         
