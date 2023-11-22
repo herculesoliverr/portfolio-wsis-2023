@@ -1,15 +1,7 @@
-import { useEffect } from "react";
-import { Home } from "./pages/Home"
-
+import { Home } from './pages/Home'
 
 function App() {
-  const username = 'nikholau';
-
-  useEffect(() => {
-    window.process = {
-       ...window.process
-    };
- }, []);
+  const username = 'herculesoliverr'
 
   return <Home username={username} />
 }
