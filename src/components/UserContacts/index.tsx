@@ -32,7 +32,7 @@ export const UserContacts = ({
           <h1>Github</h1>
         </a>
       </Card>
-      <Card className="gap-2 items-center hover:bg-green-400">
+      <Card className="gap-2 items-center hover:bg-green-600">
         <FaWhatsapp />
         <a href={`https://wa.me/${whatsappNumber}`} target="blank">
           <h1>Contate-me</h1>
