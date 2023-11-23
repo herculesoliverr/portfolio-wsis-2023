@@ -20,15 +20,17 @@ export const UserProjects = () => {
   return (
     <section className="flex flex-col items-center">
       <h3 className="text-black  text-xl">Principais Projetos</h3>
-      {projectsData.map(project => (
-        <Card className="p-0 justify-start max-w-md max-h-40">
-          <img className="h-full w-40 rounded-md" src={project.image} />
-          <div>
-            <h4 className="pl-2 py-2 text-black">{project.title}</h4>
-            <p className="pl-2">{project.description}</p>
-          </div>
-        </Card>
-      ))}
+      <div className="flex flex-col md:flex-row">
+        {projectsData.map(project => (
+          <Card className="p-0 justify-start max-w-md">
+            <img className="h-full w-40 rounded-md" src={project.image} />
+            <div>
+              <h4 className="pl-2 py-2 text-black">{project.title}</h4>
+              <p className="pl-2 pb-2">{project.description}</p>
+            </div>
+          </Card>
+        ))}
+      </div>
     </section>
   )
 }
