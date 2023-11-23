@@ -30,7 +30,7 @@ export const UserProfile = ({ username }: userNameProps) => {
   return (
     <div className="text-black flex justify-center flex-col items-center mb-4 mt-6 text-center">
       <p className="text-3xl font-bold  text-black ">{userData.name}</p>
-      <p className="mb-4 text-2xl">{userData.bio}</p>
+      <p className="mb-4 text-2xl w-3/5">{userData.bio}</p>
 
       <div className="grid grid-cols-2 gap-4 justify-center items-center">
         <div>

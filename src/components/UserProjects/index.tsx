@@ -8,13 +8,13 @@ export const UserProjects = () => {
       image: imageSyngenta,
       title: 'Syngenta Digital',
       description:
-        'Tenho atuado diretamente com dados referentes a qualidade do plantio de fazendas para trazer uma melhor visualicação e otimização para grandes produtores.'
+        'Tenho atuado diretamente com dados referentes a qualidade do plantio de fazendas para trazer uma melhor visualização e otimização para grandes produtores.'
     },
     {
       image: imageCoral,
       title: 'Coral Tintas',
       description:
-        'Atuei com a crianção do ecommerce totalmente do zero utilizando VTEX.'
+        'Atuei com a criação do ecommerce totalmente do zero utilizando VTEX.'
     }
   ]
   return (
