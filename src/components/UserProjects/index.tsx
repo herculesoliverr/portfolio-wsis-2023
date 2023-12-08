@@ -1,6 +1,6 @@
 import { Card } from '../Card'
 import imageSyngenta from '../../assets/images/syngenta.png'
-import imageCoral from '../../assets/images/coral.png'
+import imageCoral from '../../assets/images/coral.jpg'
 
 export const UserProjects = () => {
   const projectsData = [
@@ -14,7 +14,7 @@ export const UserProjects = () => {
       image: imageCoral,
       title: 'Coral Tintas',
       description:
-        'Atuei com a criação do ecommerce totalmente do zero utilizando VTEX.'
+        'Atuei no front-end e pude ajudar na criação do ecommerce totalmente do zero utilizando VTEX IO.'
     }
   ]
   return (
@@ -23,7 +23,10 @@ export const UserProjects = () => {
       <div className="flex flex-col md:flex-row">
         {projectsData.map(project => (
           <Card className="p-0 justify-start max-w-md">
-            <img className="h-full w-40 rounded-md" src={project.image} />
+            <img
+              className="h-full w-44 rounded-md bg-cover"
+              src={project.image}
+            />
             <div>
               <h4 className="pl-2 py-2 text-black">{project.title}</h4>
               <p className="pl-2 pb-2">{project.description}</p>
